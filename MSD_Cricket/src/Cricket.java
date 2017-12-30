@@ -48,7 +48,7 @@ class Team{
 }
 public class Cricket {
     static HashMap<String,Team> teams = new HashMap<>();
-    static String[] team_list = {"india","srilanka"};
+    static String[] team_list = {"india","srilanka","australia","england"};
     static Random r = new Random();
     static String endmark = "----------------------------------------------------------------------";
     public static void buildTeams(){
@@ -64,6 +64,20 @@ public class Cricket {
         player_type = new int[]{1,1,1,2,1,1,2,2,3,3,3};
         bowlers = new String[]{"Angelo Mathews","Thisara Perera","Sachith Pathirana","Suranga Lakmal","Akila Dananjaya","Nuwan Pradeep"};
         bowler_type = new int[]{2,2,1,2,1,3};
+        captain = players[3];
+        teams.put(name,new Team(name,players,player_type,bowlers,bowler_type,captain));
+        name = "australia";
+        players = new String[]{"David Warner","Aaron Finch","Steven Smith","Glenn Maxwell","Travis Head","Marcus Stoinis","Peter Handscomb","Ashton Agar","Pat Cummins","Nathan Coulter-Nile","Kane Richardson"};
+        player_type = new int[]{1,1,1,2,1,2,1,2,3,3,3};
+        bowlers = new String[]{"Glenn Maxwell","Marcus Stoinis","Ashton Agar","Pat Cummins"," Nathan Coulter-Nile","Kane Richardson"};
+        bowler_type = new int[]{1,2,1,3,3,3};
+        captain = players[2];
+        teams.put(name,new Team(name,players,player_type,bowlers,bowler_type,captain));
+        name = "england";
+        players = new String[]{"Jason Roy","Jonny Bairstow","Joe Root","Eoin Morgan","Jos Buttler","Sam Billings","Moeen Ali","Liam Plunkett","Adil Rashid","Jake Ball", "Tom Curran"};
+        player_type = new int[]{1,1,1,1,1,1,2,3,3,3,3};
+        bowlers = new String[]{"Moeen Ali","Liam Plunkett","Adil Rashid","Jake Ball", "Tom Curran"};
+        bowler_type = new int[]{1,2,1,3,3};
         captain = players[3];
         teams.put(name,new Team(name,players,player_type,bowlers,bowler_type,captain));
     }
